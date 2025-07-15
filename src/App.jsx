@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import Product from "./components/Product";
+import Product from "./components/Product/Product";
 import { PacmanLoader } from "react-spinners";
 export default function App() {
   const [products, setProducts] = useState([]);
