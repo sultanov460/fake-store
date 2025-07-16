@@ -31,7 +31,20 @@ export default function App() {
     setCount((num) => num + 1);
   }
 
-  if (loading) return <PacmanLoader color="#32cd32" />;
+  if (loading)
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh", // чтобы центр был по всей высоте экрана
+        }}
+      >
+        <PacmanLoader color="#32cd32" size={50} />
+      </div>
+    );
+
   if (error) return <p>Ошибка: {error}</p>;
   return (
     <>
