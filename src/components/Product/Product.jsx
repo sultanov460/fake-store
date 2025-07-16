@@ -1,5 +1,5 @@
 import "./style.scss";
-export default function Product({ products }) {
+export default function Product({ products, onIncrement }) {
   return (
     <>
       <div className="product">
@@ -15,7 +15,9 @@ export default function Product({ products }) {
               <strong>${product.price}</strong>
             </p>
 
-            <button className="product--btn">Добавить в корзину</button>
+            <button onClick={onIncrement} className="product--btn">
+              Добавить в корзину
+            </button>
           </div>
         ))}
       </div>

@@ -2,10 +2,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Product from "./components/Product/Product";
 import { PacmanLoader } from "react-spinners";
+import Nav from "./components/Navbar/Nav";
 export default function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -25,11 +27,16 @@ export default function App() {
     fetchProduct();
   }, []);
 
+  function increment() {
+    setCount((num) => num + 1);
+  }
+
   if (loading) return <PacmanLoader color="#32cd32" />;
   if (error) return <p>Ошибка: {error}</p>;
   return (
     <>
-      <Product products={products} />
+      <Nav counter={count} />
+      <Product products={products} onIncrement={increment} />
     </>
   );
 }

@@ -7,12 +7,12 @@ $primary-color: #32cd32;
   flex-wrap: wrap;
   gap: 50px;
   flex-wrap: wrap;
-  padding: 70px 10px;
+  padding: 70px 20px;
 
   .product--wrapper {
     padding: 20px;
     background-color: #fff;
-    width: 33%;
+    width: 27%;
     border: 2px solid $primary-color;
     cursor: pointer;
     display: flex;
@@ -24,7 +24,6 @@ $primary-color: #32cd32;
 
     &:hover {
       border: 4px solid $primary-color;
-      transform: scale(1.01);
     }
     img {
       width: 100px;
@@ -51,5 +50,23 @@ $primary-color: #32cd32;
         color: $primary-color;
       }
     }
+  }
+}
+
+@media (max-width: 1053px) {
+  .product--wrapper {
+    width: 40% !important;
+  }
+}
+
+@media (max-width: 827px) {
+  .product--wrapper {
+    width: 35% !important;
+  }
+}
+
+@media (max-width: 585px) {
+  .product--wrapper {
+    width: 80% !important;
   }
 }
