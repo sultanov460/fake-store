@@ -24,7 +24,9 @@ export default function Product({ products, onIncrement }) {
             <button onClick={onIncrement} className="product--btn">
               Добавить в корзину
             </button>
-            <Link to={`/product/${product.id}`}>Подробнее</Link>
+            <Link className="more" to={`/product/${product.id}`}>
+              Подробнее
+            </Link>
           </Link>
         ))}
       </div>

@@ -10,6 +10,8 @@ $primary-color: #32cd32;
   padding: 70px 20px;
 
   .product--wrapper {
+    color: black;
+    text-decoration: none;
     padding: 20px;
     background-color: #fff;
     width: 27%;
@@ -50,6 +52,11 @@ $primary-color: #32cd32;
         color: $primary-color;
       }
     }
+  }
+
+  .more {
+    text-decoration: none;
+    color: #000;
   }
 }
 
