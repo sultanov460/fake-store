@@ -1,10 +1,16 @@
+import { Link } from "react-router-dom";
 import "./style.scss";
 export default function Product({ products, onIncrement }) {
+  console.log(products);
   return (
     <>
       <div className="product">
         {products.map((product) => (
-          <div className="product--wrapper" key={product.id}>
+          <Link
+            to={`/product/${product.id}`}
+            className="product--wrapper"
+            key={product.id}
+          >
             <img
               src={product.image}
               alt={product.title}
@@ -18,7 +24,8 @@ export default function Product({ products, onIncrement }) {
             <button onClick={onIncrement} className="product--btn">
               Добавить в корзину
             </button>
-          </div>
+            <Link to={`/product/${product.id}`}>Подробнее</Link>
+          </Link>
         ))}
       </div>
     </>
